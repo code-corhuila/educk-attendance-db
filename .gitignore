@@ -1,0 +1,11 @@
+.env
+.env.local
+*.log
+*.pid
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+AGENTS.md

@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  attendance-db:
+    image: postgres:16-alpine
+    container_name: educk-attendance-db
+    environment:
+      POSTGRES_DB: attendance_db
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+    ports:
+      - "5433:5432"
+    volumes:
+      - attendance_data:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d:ro
+volumes:
+  attendance_data:

@@ -1,4 +1,4 @@
-flyway.url=jdbc:postgresql://localhost:5432/edutrack
-flyway.user=postgres
-flyway.password=postgres
-flyway.locations=filesystem:01_ddl,filesystem:02_dml
+[flyway]
+locations = ["filesystem:01_ddl", "filesystem:02_dml", "filesystem:03_dcl", "filesystem:04_alter"]
+validateMigrationNaming = true
+cleanDisabled = true
